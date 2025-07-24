@@ -1,0 +1,25 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       String @id @default(uuid())
+  clerkId  String
+  trips    Trip[] // relation back to Trip
+}
+
+model Trip {
+  id           String   @id @default(uuid())
+  tripDetail   String
+  imageUrls    String[]
+  createdAt    DateTime @default(now())
+  payment_link String?  @map("payement_link") // keep if db column is still misnamed
+  userId       String
+  user         User     @relation(fields: [userId], references: [id])
+}
