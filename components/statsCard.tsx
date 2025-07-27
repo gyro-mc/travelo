@@ -31,8 +31,8 @@ export default function StatsCard({ data }: { data: statsType }) {
 
                 {/* Secondary Info */}
                 <div className="flex items-center text-sm mb-4">
-                    <span className="text-green-500 font-medium flex items-center">
-                        ↗ {secondaryInfo}%
+                    <span className={`font-medium flex items-center ${secondaryInfo >= 0 ? 'text-green-500' : 'text-red-500'}`}>
+                        {secondaryInfo >= 0 ? '↗' : '↘'} {Math.abs(secondaryInfo)}%
                     </span>
                     <span className="text-gray-500 ml-2">vs last month</span>
                 </div>
@@ -43,17 +43,17 @@ export default function StatsCard({ data }: { data: statsType }) {
                 <ResponsiveContainer width="100%" height="100%">
                     <AreaChart data={statsData}>
                         <defs>
-                            <linearGradient id="colorGreen" x1="0" y1="0" x2="0" y2="1">
-                                <stop offset="5%" stopColor="#10b981" stopOpacity={0.3} />
-                                <stop offset="95%" stopColor="#10b981" stopOpacity={0} />
+                            <linearGradient id={`color${secondaryInfo >= 0 ? 'Green' : 'Red'}`} x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="5%" stopColor={secondaryInfo >= 0 ? "#10b981" : "#ef4444"} stopOpacity={0.3} />
+                                <stop offset="95%" stopColor={secondaryInfo >= 0 ? "#10b981" : "#ef4444"} stopOpacity={0} />
                             </linearGradient>
                         </defs>
                         <Area
                             type="monotone"
                             dataKey="pv"
-                            stroke="#10b981"
+                            stroke={secondaryInfo >= 0 ? "#10b981" : "#ef4444"}
                             strokeWidth={2}
-                            fill="url(#colorGreen)"
+                            fill={`url(#color${secondaryInfo >= 0 ? 'Green' : 'Red'})`}
                         />
                     </AreaChart>
                 </ResponsiveContainer>

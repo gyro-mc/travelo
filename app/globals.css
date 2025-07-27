@@ -128,3 +128,114 @@
   --color-button-bg:#256ff1;
   --color-dashboard:#f9fbfc
 }
+/* Custom Clerk Auth Styles */
+.clerk-signin-wrapper .cl-socialButtonsBlockButton {
+  background-color: #2563eb !important;
+  border: none !important;
+  border-radius: 0.5rem !important;
+  padding: 0.75rem 1rem !important;
+  font-weight: 500 !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.clerk-signin-wrapper .cl-socialButtonsBlockButton:hover {
+  background-color: #1d4ed8 !important;
+}
+
+.clerk-signin-wrapper .cl-socialButtonsBlockButtonText {
+  color: white !important;
+  font-weight: 500 !important;
+}
+
+.clerk-signin-wrapper .cl-socialButtonsBlockButtonArrow {
+  display: none !important;
+}
+
+.clerk-signin-wrapper .cl-dividerLine {
+  background-color: #d1d5db !important;
+}
+
+.clerk-signin-wrapper .cl-dividerText {
+  color: #6b7280 !important;
+  font-size: 0.875rem !important;
+}
+
+.clerk-signin-wrapper .cl-formFieldInput {
+  border: 1px solid #d1d5db !important;
+  border-radius: 0.5rem !important;
+  padding: 0.75rem 1rem !important;
+  transition: all 0.2s ease !important;
+}
+
+.clerk-signin-wrapper .cl-formFieldInput:focus {
+  border-color: #2563eb !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+  outline: none !important;
+}
+
+.clerk-signin-wrapper .cl-formButtonPrimary {
+  background-color: #2563eb !important;
+  border: none !important;
+  border-radius: 0.5rem !important;
+  padding: 0.75rem 1rem !important;
+  font-weight: 500 !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.clerk-signin-wrapper .cl-formButtonPrimary:hover {
+  background-color: #1d4ed8 !important;
+}
+
+.clerk-signin-wrapper .cl-footerActionLink {
+  color: #2563eb !important;
+  font-weight: 500 !important;
+}
+
+.clerk-signin-wrapper .cl-footerActionLink:hover {
+  color: #1d4ed8 !important;
+}
+
+.clerk-signin-wrapper .cl-alertText {
+  color: #dc2626 !important;
+  font-size: 0.875rem !important;
+}
+
+.clerk-signin-wrapper .cl-formFieldSuccessText {
+  color: #16a34a !important;
+  font-size: 0.875rem !important;
+}
+
+.clerk-signin-wrapper .cl-formFieldErrorText {
+  color: #dc2626 !important;
+  font-size: 0.875rem !important;
+}
+
+/* Hide Clerk branding */
+.clerk-signin-wrapper .cl-internal-b3fm6y {
+  display: none !important;
+}
+
+.clerk-signin-wrapper .cl-footerPages {
+  display: none !important;
+}
+
+/* Custom Google button styling */
+.clerk-signin-wrapper .cl-socialButtonsBlockButton[data-provider="google"] {
+  background-color: #4285f4 !important;
+  color: white !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+}
+
+.clerk-signin-wrapper .cl-socialButtonsBlockButton[data-provider="google"]:hover {
+  background-color: #3367d6 !important;
+}
+
+.clerk-signin-wrapper .cl-socialButtonsBlockButton[data-provider="google"]::before {
+  content: "G" !important;
+  font-weight: bold !important;
+  font-size: 1rem !important;
+  margin-right: 0.25rem !important;
+}

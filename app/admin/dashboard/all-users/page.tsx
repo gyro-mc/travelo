@@ -90,13 +90,7 @@ export default function Page() {
                     <h1 className="text-xl font-medium">Manage Users</h1>
                     <p className="opacity-[0.7]">Filter, sort, and access detailed user profiles</p>
                 </div>
-                <Button className=" bg-blue-600  hover:bg-blue-800">
-                    <FaPlus />
-                    <p className="">
 
-                        Add new user
-                    </p>
-                </Button>
 
             </div>
             <div style={{ height: 800 }} className="mt-4" >
